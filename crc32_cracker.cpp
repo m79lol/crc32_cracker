@@ -5,12 +5,6 @@
 
 unsigned int word_len = 4;
 
-//char * word = "away";
-//unsigned long original_crc = 0xCB2A3B76;
-
-//char * word = "molt";
-//unsigned long original_crc = 0x58D674F6;
-
 char * word = "coat";
 unsigned long original_crc = 0x0DA77D88;
 
@@ -63,7 +57,7 @@ unsigned int WINAPI brute_crc (void *arg) {
 int main(void) {
 	generateTable();
 
-	/*InitializeCriticalSection(&mutex_CHANGE_CRC);
+	InitializeCriticalSection(&mutex_CHANGE_CRC);
 	unsigned int *tids = new unsigned int[2];
 	HANDLE *threadsHandles = new HANDLE[2];
 
@@ -84,9 +78,7 @@ int main(void) {
 
 	printf("word %s \n",word);
 	printf("original crc %08x \n",original_crc);
-	printf("start crc %08x \n",starting_crc);*/
+	printf("start crc %08x \n",starting_crc);
 
-	printf("owly %08x\n",CRC32_function((unsigned char *)"owly",4,0x0268a61b));
-	
 	return 0;
 }
